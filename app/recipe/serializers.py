@@ -47,7 +47,7 @@ class RecipeDetailSerializer(RecipeSerializer):
 
 
 class RecipeImageSerializer(serializers.ModelSerializer):
-    """Serializer for uploading images to recipes"""
+    """Serializer for uploading images to recipe"""
 
     class Meta:
         model = Recipe

@@ -74,8 +74,8 @@ class PrivateRecipeApiTests(TestCase):
         )
         self.client.force_authenticate(self.user)
 
-    def test_retreive_recipes(self):
-        """Test retreiving a list of recipes"""
+    def test_retrieve_recipes(self):
+        """Test retrieving a list of recipes"""
         sample_recipe(user=self.user)
         sample_recipe(user=self.user)
 
@@ -87,7 +87,7 @@ class PrivateRecipeApiTests(TestCase):
         self.assertEqual(res.data, serializer.data)
 
     def test_recipes_limited_to_user(self):
-        """Test retreiving recipes for user"""
+        """Test retrieving recipes for user"""
         user2 = get_user_model().objects.create_user(
             'test2@mezanet.com',
             'test123'
